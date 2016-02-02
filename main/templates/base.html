@@ -6,7 +6,7 @@
     <link href="{{ url_for('main.static', filename='css/main.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
-{{ current_user }}
+{#{{ current_user }}#}
 {% if current_user.is_authenticated %}
 
 <div class="left-block">
@@ -15,11 +15,11 @@
 
 {% else %}
 
-<div class="login-form">
+{#<div class="login-form">#}
 
 {% include 'login.html' %}
 
-</div>
+{#</div>#}
 
 {% endif %}
 

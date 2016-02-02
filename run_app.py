@@ -29,7 +29,7 @@ def load_user(user_id):
 
     response = SqlQuery()
     query = response.execute(
-            """SELECT * FROM user_table as u WHERE u.id='%s';""" % (user_id,)
+            """SELECT * FROM user_table as u WHERE u.id='%s';""" % (user_id[0],)
     )
 
     user = User(query[1], query[0])
